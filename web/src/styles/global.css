@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFF;
+    background: #ebf2f5;
+}
+
+/*pego em todos estes elementos porque os inputs buttons e textareas por defeito não ficam com a font do body*/
+body, input, button, textarea {
+    font: 600 18px Nunito, sans-serif;
+}

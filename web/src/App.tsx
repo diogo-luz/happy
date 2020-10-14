@@ -1,9 +1,34 @@
 import React from 'react';
+import { FiArrowRight } from 'react-icons/fi';
+
+import './styles/global.css';
+import './styles/pages/landing.css';
+
+import logoImg from './images/logo.svg';
+
+//JSX - JavaScript XML
+//Porque utilizamos componentes? Para podermos criar pequenos pedaços de código que podem ser aproveitados
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Bitches!</h1>
+    <div id="page-landing">
+      <div className="content-wrapper">
+        <img src={logoImg} alt="Happy"/>
+
+        <main>
+          <h1>Leve felicidade para o mundo</h1>
+          <p>Visite orfanatos e mude o dia de muitas crianças.</p>
+        </main>
+
+        <div className="location">
+          <strong>Coimbra</strong>
+          <span>Portugal</span>
+        </div>
+
+        <a href="" className="enter-app">
+          <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
+        </a>
+      </div>
     </div>
   );
 }
