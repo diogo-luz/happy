@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import 'express-async-errors';
+import cors from 'cors';
 
 import './database/connection';
 
@@ -9,6 +10,7 @@ import errorHandler from './errors/handler';
 
 const app = express();  
 
+app.use(cors()); //em ambiente de produção deve ser configurada a origem aqui
 app.use(express.json()); //dizer ao express que queremos trabalhar com JSON
 app.use(routes);
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
